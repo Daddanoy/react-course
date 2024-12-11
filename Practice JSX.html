@@ -23,7 +23,7 @@
   
     <script type="text/babel">
 
-    console.log(dayjs().format('MMMM D'))
+    let date = (dayjs().format('MMMM D'))
 
    
 
@@ -40,6 +40,7 @@
 
    let div = 
   <div>
+    <p>Today is {date} </p>
     <p>Product cost: ${productCost}</p>
     <p>Shipping cost: ${shippingCost}</p>
     <p>Total cost:${total}</p>
