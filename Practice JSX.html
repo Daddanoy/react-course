@@ -23,12 +23,24 @@
   
     <script type="text/babel">
 
-    let date = dayjs().format('MMMM D')
-    let time = dayjs().format('HH:mm:ss')
+    
+    let time = <p> Current time :{dayjs().format('HH:mm:ss')}</p> ;
+  
 
+    const container = document.querySelector('.js-container');
+    const root = ReactDOM.createRoot(container);
+      root.render(time)
+
+ 
+      setInterval(()=>{
+        let time = <p> Current time: {dayjs().format('HH:mm:ss')}</p> ;
+        root.render(time);
+      
+    },1000);
+      
    
 
-
+/*
    let socks = 10
    let tshirt = 8
    let shippingCost = 5
@@ -37,9 +49,8 @@
 
 
 
-   let productCost = socks + (tshirt*2)
-
-   let div = 
+   let productCost = socks + (tshirt*2)*/
+   /*let div = 
   <div>
     <p>Today is {date} </p>
     <p>Current time is {time}</p>
@@ -47,10 +58,9 @@
     <p>Shipping cost: ${shippingCost}</p>
     <p>Total cost:${total}</p>
     <button>Place your order</button>
-  </div>
-
-      const container = document.querySelector('.js-container');
-      ReactDOM.createRoot(container).render(div);
+  </div>*/
+      
+     
       
     
     </script>
