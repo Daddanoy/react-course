@@ -26,10 +26,16 @@
 
       const button = <button>Hello</button>;//This is JSX; creates a new button element inside our JS. Our web browser by default doesnt understand JSX, to use it we need to translate it (Babel Library)
 
-      const paragraph = <p>paragraph of text</p>
+      const paragraph = <p>paragraph of text</p>;
+
+      const div = <div>
+        <button>Hello</button>
+        <p>paragraph of text</p>
+        </div>;
+        //Grouped together the elements inside a div element to render multiple elements
 
       const container = document.querySelector('.js-container');
-      ReactDOM.createRoot(container).render(paragraph);
+      ReactDOM.createRoot(container).render(div);
       // ReactDOM.createRoot(container) takes the element queryselector targets (.js-container) and renders all of the react elements inside that class/div. anything else outside of it doesnt get effected. .render displays whats inside the container/element. Inside of the render method, it displays the message inside.
 
       
