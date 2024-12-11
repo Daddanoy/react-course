@@ -22,14 +22,24 @@
 
    let socks = 10
    let tshirt = 8
+   let shippingCost = 5
+   let total = socks + (tshirt*2) + shippingCost
+
+
+
 
    let productCost = socks + (tshirt*2)
 
-   let total = <p>Product cost: ${productCost}</p>
-
+   let div = 
+  <div>
+    <p>Product cost: ${productCost}</p>
+    <p>Shipping cost: ${shippingCost}</p>
+    <p>Total cost:${total}</p>
+    <button>Place your order</button>
+  </div>
 
       const container = document.querySelector('.js-container');
-      ReactDOM.createRoot(container).render(total);
+      ReactDOM.createRoot(container).render(div);
       
     
     </script>
