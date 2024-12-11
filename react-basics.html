@@ -28,10 +28,13 @@
 
       const paragraph = <p>paragraph of text</p>;
 
-      const div = <div>
-        <button>Hello</button>
-        <p>paragraph of text</p>
-        </div>;
+      const div = (
+        <div>
+          <button>Hello</button>
+          <p>paragraph of text {2 + 2}</p> 
+        </div>
+      ); //insert Js code directly into JSX elements by using {}
+      
         //Grouped together the elements inside a div element to render multiple elements
 
       const container = document.querySelector('.js-container');
