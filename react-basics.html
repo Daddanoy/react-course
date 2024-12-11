@@ -17,8 +17,15 @@
       //Contains features that are tailored to websites. Use this with react.js
     </script>
 
-    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script src="https://unpkg.com/supersimpledev/babel.js">
+      //Babel is a javascript compiler, it translates other languages into javascript.
+      //When using react we used an enhanced version of JS. We use JSX(Javascript XML), which lets us write HTML directlyt in our JS code. We have to load this library first, then give the script a type element 'text/babel' to translate it.
+
+    </script>
     <script type="text/babel">
+
+      const button = <button>Hello</button>;//This is JSX; creates a new button element inside our JS. Our web browser by default doesnt understand JSX, to use it we need to translate it (Babel Library)
+
       const container = document.querySelector('.js-container');
       ReactDOM.createRoot(container).render('Welcome to SuperSimpleDev React Course');
       // ReactDOM.createRoot(container) takes the element queryselector targets (.js-container) and renders all of the react elements inside that class/div. anything else outside of it doesnt get effected. .render displays whats inside the container/element. Inside of the render method, it displays the message inside.
