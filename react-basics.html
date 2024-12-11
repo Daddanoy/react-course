@@ -6,9 +6,7 @@
   <body>
     <div class="js-container"></div>
 
-    <script src="https://unpkg.com/supersimpledev@8.3.1/external-library.js">
-      //External Library- Code that is outside of our computer, code that someone else wrote.
-    </script>
+    
 
     <script src="https://unpkg.com/supersimpledev/react.js">
       //For shared features that include mobile and websites, use this along with React native library for mobile apps.
@@ -34,14 +32,18 @@
           <p>paragraph of text {2 + 2}</p> 
         </div>
       ); //insert Js code directly into JSX elements by using {}
-      
+
         //Grouped together the elements inside a div element to render multiple elements
 
       const container = document.querySelector('.js-container');
       ReactDOM.createRoot(container).render(div);
       // ReactDOM.createRoot(container) takes the element queryselector targets (.js-container) and renders all of the react elements inside that class/div. anything else outside of it doesnt get effected. .render displays whats inside the container/element. Inside of the render method, it displays the message inside.
+        
+      //External Library- Code that is outside of our computer, code that someone else wrote.
 
+      //src="https://unpkg.com/supersimpledev@8.3.1/external-library.js"
       
+    
     </script>
   </body>
 </html>
