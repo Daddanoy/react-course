@@ -31,7 +31,10 @@
       //the 'size type allows you to enter how many charactrers can go in a placeholder'
       return (
         <>
-          <input placeholder="Send a message to the chatbot" size="30" />
+          <input 
+            placeholder="Send a message to the chatbot" 
+            size="30" 
+          />
           <button>Send</button>
         </>
       )
@@ -66,9 +69,13 @@
         */
       return (
         <div>
-              {sender === 'robot' &&  <img src="reeactrobot.png" width="50" /> } 
+              {sender === 'robot' &&  (
+                <img src="reeactrobot.png" width="50" />
+              ) } 
               {message}
-              {sender === 'user' && <img src="reactuser.png" width="50" />}
+              {sender === 'user' && (
+                <img src="reactuser.png" width="50" />
+              )}
             </div>
       )
      }
@@ -88,10 +95,22 @@
         const app = (
         <>
           <ChatInput />
-          <ChatMessage message="hello chatbot" sender="user" />
-          <ChatMessage message="Hello! How can I help you?" sender="robot" />
-          <ChatMessage message="Can you get me todays date" sender="user" />
-          <ChatMessage message="Today is September 27" sender="robot" />
+          <ChatMessage 
+            message="hello chatbot" 
+            sender="user" 
+          />
+          <ChatMessage 
+            message="Hello! How can I help you?" 
+            sender="robot" 
+          />
+          <ChatMessage 
+            message="Can you get me todays date" 
+            sender="user" 
+          />
+          <ChatMessage 
+            message="Today is September 27" 
+            sender="robot" 
+          />
 
         </>
       ); 
