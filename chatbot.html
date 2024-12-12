@@ -39,11 +39,22 @@
 
      function ChatMessage(props){//props parameter is an object, contains all attributes we give to this component. Think of it like a fetch/then case where it saves the data to a parameter in the next step
       const message = props.message
+      const sender = props.sender;
+     
+
+      if(sender === 'robot'){
+        return(
+            <div>
+              <img src="reeactrobot.png" width="50" />
+              {message}
+            </div>
+        );
+      }
       return (
         <div>
-          {message}
-          <img src="reactuser.png" width="50" />
-        </div>
+              {message}
+              <img src="reactuser.png" width="50" />
+            </div>
       )
      }
         /* In React, you can display funtions as elements when you want to render it. This is called a component. For example :
@@ -62,8 +73,11 @@
         const app = (
         <>
           <ChatInput />
-          <ChatMessage message="hello chatbot" />
-          <ChatMessage message="Hello! How can I help you?" />
+          <ChatMessage message="hello chatbot" sender="user" />
+          <ChatMessage message="Hello! How can I help you?" sender="robot" />
+          <ChatMessage message="Can you get me todays date" sender="user" />
+          <ChatMessage message="Today is September 27" sender="robot" />
+
         </>
       ); 
 
