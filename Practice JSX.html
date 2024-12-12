@@ -23,48 +23,22 @@
   
     <script type="text/babel">
 
-    
-      function LoginForm(){
-
+      function App(){
         return (
           <>
-          
-         
-          <div>
-            <input placeholder ="Email" />
-            </div>
-          <div>
-            <input placeholder ="Password" type="password" />
-            </div>
-          <button>Login</button>
-          <button>Sign Up</button>
-          </>
-        )
-
-      }
-
-
-      function App (){
-       return(
-        <>
-        <p>Hello, welcome to my website</p>
-          <LoginForm/>
+        <p>Cotton Socks</p>
+        <p>Price: $10.90</p>
+        <button>Add to Cart</button>
         </>
-       ) 
+        )
       }
+    
+ 
   
 
     const container = document.querySelector('.js-container');
     const root = ReactDOM.createRoot(container);
       root.render(<App/>)
-
- 
-    
-   
-
-
-     
-      
     
     </script>
   </body>
