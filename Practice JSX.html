@@ -23,14 +23,44 @@
   
     <script type="text/babel">
 
-      function App(){
+
+
+       function ProductDetails({item, price, discountPrice}){
+
         return (
           <>
-        <p>Cotton Socks</p>
-        <p>Price: $10.90</p>
+        <p>{item}</p>
+        <p>Price: ${price}</p>
+        {discountPrice  &&(
+          <p>Discount Price: ${discountPrice}</p>
+        ) }
+        
         <button>Add to Cart</button>
         </>
         )
+
+       } 
+
+
+
+      function App(){
+       return (
+        <>
+          <ProductDetails 
+          item="Cotton socks"
+          discountPrice="5.45" 
+          price="10.90" 
+           />
+        <ProductDetails
+         item="Tennis Ball"
+          price="6.00"
+           />
+        <ProductDetails
+         item="Plain T-shirt"
+          price="7.99"
+           />
+        </>
+       );
       }
     
  
