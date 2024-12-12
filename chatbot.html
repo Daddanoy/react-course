@@ -37,15 +37,19 @@
       )
      }
 
-     function ChatMessage({message, sender}){//props parameter is an object, contains all attributes we give to this component. Think of it like a fetch/then case where it saves the data to a parameter in the next step
+     function ChatMessage({message, sender}){
+      /*props parameter is an object, contains all attributes we give to this component. Think of it like a fetch/then case where it saves the data to a parameter in the next step
 
       //In the parameter above it uses Deconstructing directly in the parameter. It creates a variable and assigns it directly to whatever attributes are given to it by the app render
+
      // const message = props.message
       //const sender = props.sender;
 
       //const{message, sender} = props
      
 
+
+      /*
       if(sender === 'robot'){
         return(
             <div>
@@ -53,11 +57,18 @@
               {message}
             </div>
         );
+
+
+        The below is a shortcut for the above:
+        
+        {sender === 'robot' &&  <img src="reeactrobot.png" width="50" /> } 
       }
+        */
       return (
         <div>
+              {sender === 'robot' &&  <img src="reeactrobot.png" width="50" /> } 
               {message}
-              <img src="reactuser.png" width="50" />
+              {sender === 'user' && <img src="reactuser.png" width="50" />}
             </div>
       )
      }
