@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prop Practice</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    
+
+    <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/react.js">
+     
+    </script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js">
+   
+    </script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js">
+     
+    </script>
+  
+    <script type="text/babel">
+
+    function ChatMessage(props){
+      //const message = props.message
+
+      return(
+        <div>{props.message}</div>
+      )
+      
+    }
+
+
+    const app = (
+      
+      <>
+        <ChatMessage message="Hi " />
+        <ChatMessage message='How are you'  />
+        <ChatMessage message='I am good thank you' />
+        <ChatMessage message ='I am glad youre ok' />
+      </>
+    )
+
+    /*
+    
+    Flow of props-
+          Example of rendering in the app variable:
+
+               <ChatMessage message="hello chatbot" />
+          <ChatMessage message="Hello! How can I help you?" />
+          
+          ChatMessage renders a message followed by a user/robot pic. To stop us from using the same (default) message being rendered we use the attribute 'messages' in the const 'app' to write the message we want before we send it to  ReactDOM.createRoot(container).render(app);
+          SO, in the ChatMessage function we use props(properties) as a parameter, to save the attribute to. We then make a variable named 'message' as that is what the attribute is called in the app render. This variable saves the message we typed into the app function i.e  :
+          <ChatMessage message="hello chatbot" />
+          <ChatMessage message="Hello! How can I help you?" />.
+    
+    
+    
+    
+    */
+    
+
+    const container = document.querySelector('.js-container');
+    ReactDOM.createRoot(container).render(app)
+    
+    </script>
+  </body>
+</html>
