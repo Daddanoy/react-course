@@ -23,11 +23,14 @@
 
      function ChatInput(){//componenets must start with a capital letter. Pascal Case
       // All elements need a closing tag, if theres nothing inside an element we can use <input />(Self Closing Element). 
+      
+
+      //Fragment: Use <> </> instead of div to display the component on the page without having to contain it in a div. Use a div if you want to conatin it from other elements. Groups elemtns together without creating an extra div.
       return (
-        <div>
+        <>
           <input></input> 
           <button>Send</button>
-        </div>
+        </>
       )
      }
 
@@ -39,15 +42,9 @@
           <ChatInput></ChatInput>
           <ChatInput />
         */
-
-
-        <div>
-          <button>Hello</button>
-          <p>paragraph of text {2 + 2}</p> 
-          {ChatInput()}
-          <ChatInput></ChatInput>
+        <>
           <ChatInput />
-        </div>
+        </>
       ); 
 
       const container = document.querySelector('.js-container');
