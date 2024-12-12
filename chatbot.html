@@ -26,15 +26,17 @@
       
 
       //Fragment: Use <> </> instead of div to display the component on the page without having to contain it in a div. Use a div if you want to conatin it from other elements. Groups elemtns together without creating an extra div.
+
+      //the 'size type allows you to enter how many charactrers can go in a placeholder'
       return (
         <>
-          <input></input> 
+          <input placeholder="Send a message to the chatbot" size="30" />
           <button>Send</button>
         </>
       )
      }
 
-      const div = (
+      const app = (
         // In React, you can display funtions as elements when you want to render it. This is called a component. For example :
 
         /*
@@ -48,7 +50,7 @@
       ); 
 
       const container = document.querySelector('.js-container');
-      ReactDOM.createRoot(container).render(div);
+      ReactDOM.createRoot(container).render(app);
       
       
     
