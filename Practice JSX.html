@@ -28,25 +28,31 @@
        function ProductDetails({item, price, discountPrice, imgSrc}){
 
         return (
-          <>
-          <img src={imgSrc} width="150"></img>
+          <div>
+            <img src={imgSrc} width="150"></img>
         <p>{item}</p>
        
         {discountPrice ?(
           <>
-          <del><p>Price: ${price}</p></del>
-          <p>Discount Price: ${discountPrice}</p>
+            <del><p>Price: ${price}</p></del>
+            <p>Discount Price: ${discountPrice}</p>
           </>
         ) : (
 
         <p>Price ${price}</p>
+        
         )}
         
-        <button>Add to Cart</button>
-        </>
+          <button>Add to Cart</button>
+          </div>
+
+          
         );
        }
-      
+      //Change the wrapper to a <div> (without this, the image and
+          //    the "Add to Cart" button will be displayed on the same line).
+          //    Using a <div> (a block element) will put each product on a
+          //    new line.
 
     
 
