@@ -25,26 +25,30 @@
 
 
 
-       function ProductDetails({item, price, discountPrice}){
+       function ProductDetails({item, price, discountPrice, imgSrc}){
 
         return (
           <>
+          <img src={imgSrc} width="150"></img>
         <p>{item}</p>
        
-        {discountPrice &&(
+        {discountPrice ?(
           <>
           <del><p>Price: ${price}</p></del>
           <p>Discount Price: ${discountPrice}</p>
           </>
-        ) }
+        ) : (
 
-        <p>${price}</p>
+        <p>Price ${price}</p>
+        )}
         
         <button>Add to Cart</button>
         </>
-        )
+        );
+       }
+      
 
-       } 
+    
 
 
 
@@ -55,14 +59,17 @@
           item="Cotton socks"
           discountPrice="5.45" 
           price="10.90" 
+          imgSrc="cotton-socks.png"
            />
         <ProductDetails
          item="Tennis Ball"
           price="6.00"
+          imgSrc="tennis-balls.png"
            />
         <ProductDetails
          item="Plain T-shirt"
           price="7.99"
+          imgSrc="plain-t-shirt.png"
            />
         </>
        );
