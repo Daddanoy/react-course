@@ -86,42 +86,56 @@
           <ChatInput></ChatInput>
           <ChatInput />
 
-          
-
-
-
 
         */
 
-        function App(){
+        function ChatMessages(){
           const chatMessages = [{ 
             message: 'hello chatbot',
-            sender: 'user'
+            sender: 'user',
+            id: 'id1'
           },{
             message: 'Hello! How can I help you',
-            sender: 'robot'
+            sender: 'robot',
+            id: 'id2'
           },{
             message:'Can you get me todays date',
-            sender: 'user'
+            sender: 'user',
+            id: 'id3'
           },{
             message: 'Today is September 27',
-            sender: 'robot'
+            sender: 'robot',
+            id: 'id4'
           }];
 
-       
-          return (
+          return(
             <>
-            <ChatInput />
-            { chatMessages.map((chatMessage)=>{//map() takes each value from an array , runs the function, saves it to the parameter, and returns a new value
+
+           { chatMessages.map((chatMessage)=>{//map() takes each value from an array , runs the function, saves it to the parameter, and returns a new value
+
+              //in react if we insert an array of components we need to give each component a prop called key. helps keep track of whats being changed
                 return (
                   <ChatMessage 
                   message ={chatMessage.message}
                   sender = {chatMessage.sender}
+                  key = {chatMessage.id}
                   />
                 )
                 
               })}
+              </>
+            );
 
+
+        }
+
+        function App(){
+        
+          return (
+            <>
+            <ChatInput />
+            <ChatMessages />
+           
           </>
           )
         }
