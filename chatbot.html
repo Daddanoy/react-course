@@ -21,7 +21,8 @@
     </script>
     <script type="text/babel">
 
-     function ChatInput(){//componenets must start with a capital letter. Pascal Case
+     function ChatInput(){
+      //componenets must start with a capital letter. Pascal Case
       // All elements need a closing tag, if theres nothing inside an element we can use <input />(Self Closing Element). 
       
 
@@ -36,16 +37,25 @@
       )
      }
 
-      const app = (
-        // In React, you can display funtions as elements when you want to render it. This is called a component. For example :
+     function ChatMessage(){
+      return (
+        <div>
+          hello chatbot 
+          <img src="reactuser.png" width="50" />
+        </div>
+      )
+     }
+        /* In React, you can display funtions as elements when you want to render it. This is called a component. For example :
 
         /*
         {ChatInput()}
           <ChatInput></ChatInput>
           <ChatInput />
         */
+        const app = (
         <>
           <ChatInput />
+          <ChatMessage />
         </>
       ); 
 
