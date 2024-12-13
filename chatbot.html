@@ -22,6 +22,8 @@
     <script type="text/babel">
 
      function ChatInput(){
+
+      
       //componenets must start with a capital letter. Pascal Case
       // All elements need a closing tag, if theres nothing inside an element we can use <input />(Self Closing Element). 
       
@@ -30,7 +32,7 @@
 
       //the 'size type allows you to enter how many charactrers can go in a placeholder'
       function saveInputText(event){//event is an object that contains details about the change
-
+        console.log(event.target.value) //gives us the element we are typing in 
       }
 
       return (
