@@ -23,7 +23,7 @@
 
      function ChatInput(){
 
-      
+      const [inputText, setInputText ] = React.useState('')//inputtext = current data, setinputtext = new string. '' is a default as the input is empty by default
       //componenets must start with a capital letter. Pascal Case
       // All elements need a closing tag, if theres nothing inside an element we can use <input />(Self Closing Element). 
       
@@ -32,7 +32,20 @@
 
       //the 'size type allows you to enter how many charactrers can go in a placeholder'
       function saveInputText(event){//event is an object that contains details about the change
-        console.log(event.target.value) //gives us the element we are typing in 
+        setInputText(event.target.value) //gives us the element we are typing in 
+      }
+
+      function sendMessage(){
+        //console.log(inputText)
+        function sendMessage(){//in react dont update the data directly. We also dont modify it directly. create a copy of the data
+            setChatMessages([
+              ...chatMessages,  //spread takes the values of the named array , and copies it
+              {
+                message: 'test',
+                sender: 'user',
+                id: crypto.randomUUID()
+              }
+            ])
       }
 
       return (
@@ -42,7 +55,9 @@
             size="30" 
             onChange = {saveInputText}//runs a function when we change the text inside an <input>
           />
-          <button>Send</button>
+          <button
+          onClick = {sendMessage}
+          >Send</button>
         </>
       )
      }
@@ -117,7 +132,9 @@
           //const chatMessages = array[0] // gives us the current value/data of chat messages
           //const [chatMessages, setChatMessages]= array // array destructuring, this gets the first value out of the array, and the second value out of the array.
           //const setChatMessages = array[1] // Function that upsdates the data
-          function sendMessage(){//in react dont update the data directly. We also dont modify it directly. create a copy of the data
+          /*function sendMessage(){//in react dont update the data directly. We also dont modify it directly. create a copy of the data
+
+
             setChatMessages([
               ...chatMessages,  //spread takes the values of the named array , and copies it
               {
@@ -132,10 +149,10 @@
             id: crypto.randomUUID()//generates a unique id string
            */}//);
 
-           console.log(chatMessages)
+           //console.log(chatMessages) <button onClick={sendMessage}>Send Message</button>
            return(
             <>
-              <button onClick={sendMessage}>Send Message</button>
+              
 
            { chatMessages.map((chatMessage)=>{//map() takes each value from an array , runs the function, saves it to the parameter, and returns a new value
 
