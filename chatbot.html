@@ -90,7 +90,7 @@
         */
 
         function ChatMessages(){
-          const array = React.useState([{ 
+          const [chatMessages, setChatMessages] = React.useState([{ //instead of making a new variable to set the values arra0/1 we set chatmessages and setmessages to equal 0/1. basically a shortcut 
             message: 'hello chatbot',
             sender: 'user',
             id: 'id1'
@@ -107,8 +107,9 @@
             sender: 'robot',
             id: 'id4'
           }]);
-          const chatMessages = array[0] // gives us the current value/data of chat messages
-          const setChatMessages = array[1] // Function that upsdates the data
+          //const chatMessages = array[0] // gives us the current value/data of chat messages
+          //const [chatMessages, setChatMessages]= array // array destructuring, this gets the first value out of the array, and the second value out of the array.
+          //const setChatMessages = array[1] // Function that upsdates the data
           function sendMessage(){//in react dont update the data directly. We also dont modify it directly. create a copy of the data
             setChatMessages([
               ...chatMessages,  //spread takes the values of the named array , and copies it
