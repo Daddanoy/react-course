@@ -109,7 +109,11 @@
           }];
 
           function sendMessage(){
-            console.log('send message')
+           chatMessages.push({
+            message: 'test',
+            sender:'user',
+            id: crypto.randomUUID()//generates a unique id string
+           })
           }
 
           return(
