@@ -28,6 +28,8 @@
               id: crypto.randomUUID(),
             },
           ]);
+
+          setInputText('')
         }
 
         return (
@@ -36,6 +38,7 @@
               placeholder="Send a message to the chatbot" 
               size="30" 
               onChange={saveInputText}
+              value={inputText}
             />
             <button onClick={sendMessage}>Send</button>
           </>
