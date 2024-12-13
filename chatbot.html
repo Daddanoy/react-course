@@ -29,12 +29,16 @@
       //Fragment: Use <> </> instead of div to display the component on the page without having to contain it in a div. Use a div if you want to conatin it from other elements. Groups elemtns together without creating an extra div.
 
       //the 'size type allows you to enter how many charactrers can go in a placeholder'
+      function saveInputText(event){//event is an object that contains details about the change
+
+      }
+
       return (
         <>
           <input 
             placeholder="Send a message to the chatbot" 
             size="30" 
-            onChange = {}//runs a function when we change the text inside an <input>
+            onChange = {saveInputText}//runs a function when we change the text inside an <input>
           />
           <button>Send</button>
         </>
