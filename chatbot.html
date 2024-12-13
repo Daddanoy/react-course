@@ -109,17 +109,23 @@
           }]);
           const chatMessages = array[0] // gives us the current value/data of chat messages
           const setChatMessages = array[1] // Function that upsdates the data
-          function sendMessage(){//in react dont update the data directly
-           chatMessages.push({
+          function sendMessage(){//in react dont update the data directly. We also dont modify it directly. create a copy of the data
+            setChatMessages([
+              ...chatMessages,  //spread takes the values of the named array , and copies it
+              {
+                message: 'test',
+                sender: 'user',
+                id: crypto.randomUUID
+              }
+            ])
+           /*chatMessages.push({
             message: 'test',
             sender:'user',
             id: crypto.randomUUID()//generates a unique id string
-           });
+           */}//);
 
            console.log(chatMessages)
-          }
-
-          return(
+           return(
             <>
               <button onClick={sendMessage}>Send Message</button>
 
@@ -137,7 +143,10 @@
               })}
               </>
             );
-        }
+          }
+
+          
+        
 
 
 
