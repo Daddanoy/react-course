@@ -31,6 +31,7 @@
           ]
           
             setChatMessages(newChatMessages)
+
             setTimeout(()=>{
               const response = Chatbot.getResponse(inputText);
            setChatMessages([
@@ -42,7 +43,7 @@
             },
           ]);
 
-            },2000)
+            },1000)
            
      
 
