@@ -21,17 +21,27 @@
         }
 
         function sendMessage() {
-          setChatMessages([
+          const newChatMessages = [
             ...chatMessages,
             {
               message: inputText,
               sender: 'user',
               id: crypto.randomUUID(),
             },
+          ]
+          
+            setChatMessages(newChatMessages)
+            set
+           const response = Chatbot.getResponse(inputText);
+           setChatMessages([
+            ...newChatMessages,
+            {
+              message: response,
+              sender: 'robot',
+              id: crypto.randomUUID(),
+            },
           ]);
-
-          const response = Chatbot.getResponse(inputText)
-          console.log(response)
+     
 
           setInputText('')
         }
