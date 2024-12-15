@@ -23,6 +23,7 @@
        
 
         async function sendMessage() {
+          setInputText('')
           const newChatMessages = [
             ...chatMessages,
             {
@@ -33,7 +34,19 @@
           ]
           //The above is the same principel as chatmessage, setchatmessage
           
-            setChatMessages(newChatMessages)
+            //setChatMessages(newChatMessages)
+
+            setChatMessages([
+              ...newChatMessages,
+              {
+                message: 'Loading',
+                sender:'robot',
+                id:crypto.randomUUID
+              }
+            ])
+
+            
+
 
             //setTimeout(()=>{
               const response = await Chatbot.getResponseAsync(inputText);
@@ -50,7 +63,7 @@
            
      
 
-          setInputText('')
+          
         }
 
         function onEnter(event){
