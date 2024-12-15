@@ -23,10 +23,32 @@
           setInput(event.target.value)
 
         }
+
+        function resetButton (){
+          setInput('')
+        }
+
+        function exampleText(){
+          setInput('Yonnik')
+        }
         return (
           <>
-          <input onChange={inputType}></input>
-          <p>{input}</p>
+          <input
+           onChange={inputType}
+           placeholder = 'Type name here'
+           value = {input}
+            />
+           
+          
+          <button onClick={resetButton}>
+            Reset
+            </button>
+
+          <button onClick ={exampleText}>
+            Example
+            </button>
+
+          <p>Hello {input}</p>
           </>
         )
         
