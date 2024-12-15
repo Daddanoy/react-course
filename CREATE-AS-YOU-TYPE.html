@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Chatbot</title>
+    <title>Input</title>
   </head>
   <body>
     <div class="js-container"></div>
@@ -12,12 +12,23 @@
     
     <script type="text/babel">
 
- 
+     
  
       
 
       function App(){
-      
+        const [input, setInput] = React.useState('')
+
+        function inputType(event){
+          setInput(event.target.value)
+
+        }
+        return (
+          <>
+          <input onChange={inputType}></input>
+          <p>{input}</p>
+          </>
+        )
         
       }
 
