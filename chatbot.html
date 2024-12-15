@@ -29,6 +29,7 @@
               id: crypto.randomUUID(),
             },
           ]
+          //The above is the same principel as chatmessage, setchatmessage
           
             setChatMessages(newChatMessages)
 
@@ -77,6 +78,8 @@
         );
       }
 
+      //After we map through chatmessages array, we use ChatMessage to construct a message to display on the DOM. It takes the message, sender props to display which message needs to be placed where, the user, and the image used based on conditionals.
+
       function ChatMessages({chatMessages}) {
         return (
           <>
@@ -92,6 +95,7 @@
           </>
         );
       }
+      //For every chat message we map through , we allocate/return  it to a chatmessage component with the mapped details attached
 
       function App() {
 
@@ -128,6 +132,8 @@
           </>
         );
       }
+
+      //We allocate an array of messages to the chatMessages state array. Below we render the input , and messages saved to chat messages. 
 
       const container = document.querySelector('.js-container');
       ReactDOM.createRoot(container).render(<App />);
