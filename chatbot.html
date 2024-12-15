@@ -35,7 +35,7 @@
           
             setChatMessages(newChatMessages)
 
-            setTimeout(()=>{
+            //setTimeout(()=>{
               const response = Chatbot.getResponse(inputText);
            setChatMessages([
             ...newChatMessages,
@@ -46,7 +46,7 @@
             },
           ]);
 
-            },1000)
+            //},1000)
            
      
 
@@ -56,9 +56,14 @@
         function onEnter(event){
           if(event.key === 'Enter'){
             sendMessage()
+          } else if(event.key === 'Escape'){
+            setInputText('')
           }
 
         }
+
+        
+        
 
 
         return (
@@ -69,6 +74,7 @@
               onChange={saveInputText}
               value={inputText}
               onKeyDown={onEnter}
+              
             />
             <button onClick={sendMessage}>Send</button>
           </>
