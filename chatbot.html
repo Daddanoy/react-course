@@ -236,7 +236,7 @@
 
         React.useEffect(()=>{
           console.log('Updated')
-        },[chatMessages]);//Put hooks at the top o te compoet, not in functin or if statements. By using the [], it only lets the effect run once after the component is updated. if it has a lot of complex code it could cause problems. Will run this function everytime chatmessages changes
+        },[chatMessages]);//Put hooks at the top o te compoet, not in functin or if statements. By using the [], it only lets the effect run once after the component is updated. if it has a lot of complex code it could cause problems. Will run this function everytime chatmessages changes. This is called a dependency array, controls when use effect runs.
         return (
           <div className="chat-messages-container">
             {chatMessages.map((chatMessage) => {
