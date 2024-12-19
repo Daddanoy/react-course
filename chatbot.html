@@ -72,6 +72,10 @@
         
       }
 
+      .chat-message-profile{
+        width: 45px;
+      }
+
 
 
 
@@ -198,13 +202,13 @@
               : 'chat-message-robot'
             }>
             {sender === 'robot' && (
-              <img src="reeactrobot.png" width="50" />
+              <img className="chat-message-profile" src="reeactrobot.png"  />
             )} 
             <div className ="chat-message-text">
               {message}
             </div>
             {sender === 'user' && (
-              <img src="reactuser.png" width="50" />
+              <img className="chat-message-profile" src="reactuser.png" />
             )}
           </div>
         );
@@ -255,12 +259,14 @@
         ]);
         return (
           <div className="app-container">
-            <ChatInput
-            chatMessages = {chatMessages} 
-            setChatMessages = {setChatMessages}/>
+            
             <ChatMessages
             chatMessages ={chatMessages}
             />
+
+            <ChatInput
+            chatMessages = {chatMessages} 
+            setChatMessages = {setChatMessages}/>
           </div>
         );
       }
