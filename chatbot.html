@@ -237,7 +237,11 @@
        const chatMessagesRef = React.useRef(null);//Lets use automatically sav an html element from the component. ref is a container with special react features. Null is the initial value (empty)
 
         React.useEffect(()=>{
-        const containerElem = chatMessagesRef.current//saves the container inside the ref variable
+        const containerElem = chatMessagesRef.current; 
+        if(containerElem){
+          containerElem.scrollTop = containerElem.scrollHeight//saves the container inside the ref variable
+          //scroll top means how far we should scroll from the top. scroll height means we set the scroll to the height of the container
+        }
         },[chatMessages]);//Put hooks at the top o te compoet, not in functin or if statements. By using the [], it only lets the effect run once after the component is updated. if it has a lot of complex code it could cause problems. Will run this function everytime chatmessages changes. This is called a dependency array, controls when use effect runs.
         return (
           <div 
