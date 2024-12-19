@@ -234,7 +234,9 @@
 
       function ChatMessages({chatMessages}) {
 
-        React.useEffect();//Put hooks at the top o te compoet, not in functin or if statements
+        React.useEffect(()=>{
+          console.log('Updated')
+        });//Put hooks at the top o te compoet, not in functin or if statements
         return (
           <div className="chat-messages-container">
             {chatMessages.map((chatMessage) => {
