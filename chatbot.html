@@ -31,6 +31,12 @@
         display: flex;
 
       }
+
+      .app-container{
+        max-width:600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
     </style>
   </head>
   <body>
@@ -198,14 +204,14 @@
           },
         ]);
         return (
-          <>
+          <div className="app-container">
             <ChatInput
             chatMessages = {chatMessages} 
             setChatMessages = {setChatMessages}/>
             <ChatMessages
             chatMessages ={chatMessages}
             />
-          </>
+          </div>
         );
       }
 
