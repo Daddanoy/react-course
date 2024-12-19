@@ -46,6 +46,9 @@
         margin-right: auto;
         
         height: 100vh;
+        display: flex;
+        flex-direction: column;
+        
       }
 
       .chat-message-user{
@@ -80,7 +83,10 @@
       .chat-message-profile{
         width: 45px;
       }
-
+      
+      .chat-messages-container{
+        flex-grow: 1;
+      }
 
 
 
@@ -223,7 +229,7 @@
 
       function ChatMessages({chatMessages}) {
         return (
-          <>
+          <div className="chat-messages-container">
             {chatMessages.map((chatMessage) => {
               return (
                 <ChatMessage 
@@ -233,7 +239,7 @@
                 />
               );
             })}
-          </>
+          </div>
         );
       }
       //For every chat message we map through , we allocate/return  it to a chatmessage component with the mapped details attached
