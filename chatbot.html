@@ -14,6 +14,23 @@
         cursor: pointer;
 
       }
+
+      .chat-input{
+        padding: 12px 15px;
+        border-radius: 10px;
+        border-width: 1px;
+        font-size: 15px;
+
+        flex-grow: 1; 
+      
+        
+
+      }
+
+      .chat-input-container{
+        display: flex;
+
+      }
     </style>
   </head>
   <body>
@@ -101,13 +118,14 @@
 
 
         return (
-          <>
+          <div className="chat-input-container"> 
             <input 
               placeholder="Send a message to the chatbot" 
               size="30" 
               onChange={saveInputText}
               value={inputText}
               onKeyDown={onEnter}
+              className="chat-input"
               
               
             />
@@ -115,7 +133,7 @@
              onClick={sendMessage}
              className="send-button"//use class name to set the class in react
              >Send</button>
-          </>
+          </div>
         );
       }
 
