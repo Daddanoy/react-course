@@ -233,6 +233,8 @@
       //After we map through chatmessages array, we use ChatMessage to construct a message to display on the DOM. It takes the message, sender props to display which message needs to be placed where, the user, and the image used based on conditionals.
 
       function ChatMessages({chatMessages}) {
+
+        React.useEffect();//Put hooks at the top o te compoet, not in functin or if statements
         return (
           <div className="chat-messages-container">
             {chatMessages.map((chatMessage) => {
