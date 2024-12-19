@@ -2,6 +2,11 @@
 <html>
   <head>
     <title>Chatbot</title>
+    <style>
+      .send-button{
+        background-color: green;
+      }
+    </style>
   </head>
   <body>
     <div class="js-container"></div>
@@ -97,7 +102,10 @@
               onKeyDown={onEnter}
               
             />
-            <button onClick={sendMessage}>Send</button>
+            <button
+             onClick={sendMessage}
+             className="send-button"//use class name to set the class in react
+             >Send</button>
           </>
         );
       }
