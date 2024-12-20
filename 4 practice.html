@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+
+    <style>
+
+      .button-4a{
+        background-color: rgb(25, 135, 84);
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    
+
+    <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/react.js">
+     
+    </script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js">
+   
+    </script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js">
+     
+    </script>
+  
+    <script type="text/babel">
+
+
+
+
+
+
+      function App(){
+
+      return (
+        <button className="button-4a">ON</button>
+      )
+
+      }
+    
+ 
+  
+
+    const container = document.querySelector('.js-container');
+    const root = ReactDOM.createRoot(container);
+      root.render(<App/>)
+    
+    </script>
+  </body>
+</html>
