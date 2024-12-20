@@ -11,6 +11,7 @@
         border-radius: 5px;
         padding: 10px 15px;
         color: white;
+        cursor: pointer;
       }
     </style>
   </head>
@@ -35,14 +36,28 @@
     <script type="text/babel">
 
 
-
+      
 
 
 
       function App(){
 
+        const[isButtonOn, setIsButtonOn]= React.useState(true);
+        //Sets the original state default to true/ON. 
+
+        
+
+        function switchButtonOn(){
+          setIsButtonOn(!isButtonOn)
+          //A function that sets the boolean to false
+        }
+
       return (
-        <button className="button-4a">ON</button>
+        <button 
+        className="button-4a"
+        onClick={switchButtonOn}//When clicked it sets back and forth state
+        
+        >{isButtonOn? 'ON' : 'OFF'}</button>// depending on the state, it will show the correlated message
       )
 
       }
