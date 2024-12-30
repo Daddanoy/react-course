@@ -51,6 +51,10 @@
         border: none;
         border-radius: 5px;
       }
+
+      .show-js{
+        margin-left: 10px;
+      }
     </style>
   </head>
   <body>
@@ -80,6 +84,15 @@
 
       function App(){
 
+        const[showPassword, setShowPassword]= React.useState(false)
+
+        function passwordChange(){
+        
+            setShowPassword(!showPassword)
+
+          }
+        
+
         return (
 
           <div>
@@ -90,7 +103,8 @@
               </div>
 
               <div>
-                <input className="password-js" type="text" placeholder="Password"/>
+                <input className="password-js" type={showPassword? "text" : "password"} placeholder="Password"/>
+                <button onClick={passwordChange} className="show-js">Show</button>
                 </div>
 
                 <div>
