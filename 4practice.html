@@ -4,7 +4,27 @@
     <title>React Basics</title>
 
     <style>
+      body{
+        margin-top: 0;
+        margin-bottom: 0;
+      }
 
+      .counter-button{
+        background-color: rgb(25,135,84);
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      .main-js{
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        background-color: rgb(200,200,200);
+        align-items: center;
+      }
     </style>
   </head>
   <body>
@@ -53,12 +73,12 @@
          },1000)
         }
             return (
-              <div>
+              <div className="main-js">
 
-                <button onClick={countUp} ref ={buttonRef}>
+                <button className="counter-button" onClick={countUp} ref ={buttonRef}>
                   Clicked {count} {count === 1? 'time' : 'times'}</button>
-                  <button onClick={resetCount}>Reset</button>
-                  <button onClick={autoClick}>Auto-Click</button>
+                  <button className="counter-button" onClick={resetCount}>Reset</button>
+                  <button className="counter-button" onClick={autoClick}>Auto-Click</button>
                 </div>
               
           )
