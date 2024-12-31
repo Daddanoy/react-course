@@ -16,4 +16,13 @@ age: PropTypes.number,
 isStudent: PropTypes.bool,
 }
 //This creates the proptypes for each key5 
+
+Student.defaultProps = {
+  name: 'Guest', 
+  age:0,
+  isStudent: false,
+}
+
+//This can be used in destructuring. In a future updatye this will be depreciated
 export default Student
+
