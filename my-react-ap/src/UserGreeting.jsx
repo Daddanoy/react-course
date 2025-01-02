@@ -15,7 +15,7 @@ return(
 
 }
 
-UserGreeting.proptypes = {
+UserGreeting.propTypes = {
   isLoggedIn: PropTypes.bool,
   username: PropTypes.string,
 }
