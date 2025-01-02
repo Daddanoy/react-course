@@ -12,6 +12,10 @@ const fruits = [  {id: 1, name:'apple', calories: 95},
 
 //fruits.sort((a,b)=> a.name.localeCompare(b.name) ) SORTS STINGS IN AN ARRAY BY THEIR NAME PROPERTY ALPHABETICALLY
 //fruits.sort((a,b)=> b.name.localeCompare(a.name) ) reverse ALPHABETICAL
+
+fruits.sort((a,b) => a.calories - b.calories)//NUMERIC ORDER
+fruits.sort((a,b) => b.calories - a.calories)//REVERSE NUMERIC ORDER
+
 const listItems = fruits.map(fruit => <li key={fruit.id}>
                                       {fruit.name}: &nbsp;
                                       <b>{fruit.calories}</b></li> 
