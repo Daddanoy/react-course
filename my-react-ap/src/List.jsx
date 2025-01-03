@@ -20,6 +20,11 @@ return (<>
 
 }
 
+List.defaultProps = {
+  category: "Category",
+  items: []
+}
+
 export default List
 
 
