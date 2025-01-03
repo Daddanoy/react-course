@@ -3,7 +3,7 @@
 function List(props){
 
 
-
+const category = props.category
 const itemList = props.items
 
 const listItems = itemList.map(item => <li key={item.id}>
@@ -12,7 +12,11 @@ const listItems = itemList.map(item => <li key={item.id}>
 
 )
 
-return (<ol>{listItems}</ol>)
+return (<>
+<h3 className= "list-category">{category}</h3> 
+<ol className="list-items">{listItems}</ol>
+</>)
+
 
 }
 
