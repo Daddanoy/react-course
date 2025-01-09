@@ -1,10 +1,11 @@
 
 function Button (){
   
-const handleClick = (e)=> console.log(e)//SHOWS ALL THE PROPERTIES LINKED TO THIS OBJECT.
+//const handleClick = (e)=> console.log(e)//SHOWS ALL THE PROPERTIES LINKED TO THIS OBJECT.
  
+const handleClick = (e)=> e.target.textContent = 'Ouch🤕'
 
-  return(<button onClick={(e)=> handleClick(e)}>Click Me</button>)
+  return(<button onClick={(e)=> handleClick(e)}>Click Me😋</button>)
 
     //const handleClick2 = (name)=> console.log(`${name} stop clicking me`)
 
