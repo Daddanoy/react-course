@@ -5,7 +5,7 @@ function Button (){
  
 const handleClick = (e)=> e.target.textContent = 'Ouch🤕'
 
-  return(<button onClick={(e)=> handleClick(e)}>Click Me😋</button>)
+  return(<button onDoubleClick={(e)=> handleClick(e)}>Click Me😋</button>)
 
     //const handleClick2 = (name)=> console.log(`${name} stop clicking me`)
 
