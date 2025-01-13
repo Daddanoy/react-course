@@ -1,10 +1,11 @@
-import MyComponent from "./MyComponent.jsx"
+import CounterApp from "./Counter.jsx"
+
 
 function App() {
 
 return(<>
 
-<MyComponent/>
+<CounterApp />
 
 </>)
 }
