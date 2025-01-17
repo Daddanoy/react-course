@@ -1,11 +1,11 @@
-import CounterApp from "./Counter.jsx"
+import OnChange from "./OnChange"
 
 
 function App() {
 
 return(<>
 
-<CounterApp />
+<OnChange />
 
 </>)
 }
