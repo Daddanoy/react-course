@@ -5,7 +5,9 @@ function OnChange (){
   const [name, setName] = useState("");
   const [qunatity, setQuantity] = useState();
   const [comment, setComment] = useState("");
-  const [payment, setPayment] = useState("")
+  const [payment, setPayment] = useState("");
+  const [shipping, setShipping] = useState("Delivery");
+
 
   function handleQuantityChange(event){
     setQuantity(event.target.value)
@@ -24,6 +26,10 @@ function OnChange (){
     setPayment(event.target.value)
   }
 
+  function handleShippingChange(event){
+    setShipping(event.target.value)
+  }
+
   return(<div>
     <input value ={name} onChange={handleChange} />
     <p>Name: {name}</p>
@@ -37,10 +43,25 @@ function OnChange (){
     <select value={payment} onChange={handlePaymentChange}>
       <option value =""> Select an option</option>
       <option value="Visa">Visa</option>
-      <option value="MasterdCard">MasterCard</option>
+      <option value="MasterCard">MasterCard</option>
       <option value="GiftCard">GiftCard</option>
     </select>
     <p>Payment: {payment}</p>
+
+    <label >
+      <input type="radio" value="Pick-Up"
+            checked={shipping === "Pick-Up"}//if this option is selected,and checked value is equal to shippings value(pickup) the below will set the shipping to the selected
+            onChange={handleShippingChange}/>
+      
+      Pick Up
+    </label>
+    <label >
+    <input type="radio" value="Delivery"
+            checked={shipping === "Delivery"}
+            onChange={handleShippingChange}/>
+      Delivery
+    </label>
+    <p>Shipping: {shipping}</p>
   </div>)
 
   
