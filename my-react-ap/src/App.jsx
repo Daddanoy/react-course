@@ -1,11 +1,11 @@
-import OnChange from "./OnChange"
+import ColorPicker from "./ColorPicker"
 
 
 function App() {
 
 return(<>
 
-<OnChange />
+<ColorPicker/>
 
 </>)
 }
