@@ -2,16 +2,19 @@ import React, {useState} from 'react'
 
 function OnChange (){
 
-  const [name, setName] = useState("Guest");
+  const [name, setName] = useState("");
 
-  function handleNameChange(event){
+  function handleChange(event){
     setName(event.target.value)
   }
 
+
   return(<div>
-    <input value={name} onChange={handleNameChange} />
+    <input value ={name} onChange={handleChange} />
     <p>Name: {name}</p>
   </div>)
 }
+
+  
 
 export default OnChange
