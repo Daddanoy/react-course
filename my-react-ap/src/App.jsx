@@ -1,11 +1,11 @@
-import ColorPicker from "./ColorPicker"
+import CounterApp from "./Counter"
 
 
 function App() {
 
 return(<>
 
-<ColorPicker/>
+<CounterApp/>
 
 </>)
 }

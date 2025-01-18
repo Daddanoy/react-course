@@ -5,12 +5,16 @@ function CounterApp(){
   let [counter, setCounter] = useState(0);
 
   const increaseCounter = ()=>{
-    setCounter(counter +=1)
+    setCounter(c => c +1) //Updater function, best to use for good practice. Function passed as an argument to set state. Allows for updates based on the previous state, not the current state.
+    setCounter(c => c +1)
+    setCounter(c => c +1)
   }
 
   const decreaseCounter = ()=>{
     if(counter >= 1){
-      setCounter(counter -=1)
+      setCounter(c =>c -1)
+      setCounter(c =>c -1)
+      setCounter(c =>c -1)
     }
   }
     
