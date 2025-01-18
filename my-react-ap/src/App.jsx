@@ -1,11 +1,13 @@
-import CounterApp from "./Counter"
+import MyComponent from "./MyComponent2"
 
 
 function App() {
 
+
+
 return(<>
 
-<CounterApp/>
+<MyComponent/>
 
 </>)
 }
