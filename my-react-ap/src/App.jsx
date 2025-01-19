@@ -1,4 +1,4 @@
-import MyComponent from "./FruitArray"
+import MyComponent from "./CarAdder.jsx"
 
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
 
 return(<>
 
-<MyComponent/>
+<MyComponent />
 
 </>)
 }
