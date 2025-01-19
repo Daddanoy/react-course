@@ -1,4 +1,4 @@
-import MyComponent from "./MyComponent2"
+import MyComponent from "./FruitArray"
 
 
 function App() {
