@@ -43,9 +43,15 @@ function MyComponent(){
     <h2>List of Car Objects</h2>
     <ul>
       {cars.map((car,index) => 
-      <li key={index} onClick={()=> handleRemoveCar(index)}>
+      <>
+      <li key={index} >
         {car.year} {car.make} {car.model}
-        </li>)}
+        </li>
+        <button onClick={()=> handleRemoveCar(index)} >Delete Car</button>
+        
+        </>
+      
+      )}
     </ul>
 
     <input type="number" value={carYear} onChange ={handleYearChange} /> <br/>
