@@ -144,6 +144,13 @@ background-repeat: no-repeat;
 background-size: cover;
 background-attachment: fixed;
 margin: 0;
+
+/*OPTIONAL*/
+
+display: flex;
+justify-content: center;
+min-height: 100vh;
+align-items: center;
 }
 
 .clock-container{
