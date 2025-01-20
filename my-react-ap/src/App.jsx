@@ -1,4 +1,4 @@
-import MyComponent from "./CarAdder.jsx"
+import ToDoList from "./ToDoList"
 
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
 
 return(<>
 
-<MyComponent />
+<ToDoList />
 
 </>)
 }
