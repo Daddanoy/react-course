@@ -22,9 +22,12 @@ function formatTime(){
 
   //hours = hours % 12 || 12 if you want is as meridiem time
 
-  return `${hours}:${minutes}:${seconds} ${meridiem}`
+  return `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)} ${meridiem}`
 }
 
+function padZero(number){
+return (number < 10? "0" : '')+ number
+}
 
   return( <div className='clock-container'>
                <div className='clock'>
