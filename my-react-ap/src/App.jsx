@@ -1,5 +1,6 @@
 
-import MyComponent from "./useEffect2"
+import DigitalClock from "./Digital Clock"
+
 
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
 
 return(<>
 
-<MyComponent />
+<DigitalClock />
 
 </>)
 }
