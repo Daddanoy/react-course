@@ -1,4 +1,5 @@
-import ToDoList from "./ToDoList"
+
+import MyComponent from "./useEffect"
 
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
 
 return(<>
 
-<ToDoList />
+<MyComponent />
 
 </>)
 }

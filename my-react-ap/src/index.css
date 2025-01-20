@@ -45,6 +45,11 @@ input[type="color"]{
   border: 3px solid hsl(0 , 0%, 80%);
 } CSS FOR COLOR PICKER*/
 
+
+
+
+
+/*
 body{
   background-color: rgb(41, 37, 37);
 }
@@ -128,4 +133,5 @@ li{
 padding: 8px 12px;
 font-size: 1.4rem;
 margin-left: 10px;
-}
+}   CSS FOR TO DO LIST*/ 
+
