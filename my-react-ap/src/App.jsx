@@ -1,5 +1,5 @@
 
-import MyComponent from "./useEffect"
+import MyComponent from "./useEffect2"
 
 
 function App() {
