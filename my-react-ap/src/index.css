@@ -137,6 +137,15 @@ margin-left: 10px;
 
 
 
+
+
+
+
+
+
+
+
+/*
 body{
 background-image: url(assets/dbz.jpg);
 background-position: center;
@@ -145,7 +154,7 @@ background-size: cover;
 background-attachment: fixed;
 margin: 0;
 
-/*OPTIONAL*/
+//OPTIONAL
 
 display: flex;
 justify-content: center;
@@ -167,3 +176,15 @@ font-family: monospace;
 text-shadow: 3px 3px 5px black;
 text-align: center;
 }
+
+DIGITAL CLOCK CSS
+*/
+
+
+
+
+.box{
+  border: 3px solid;
+  padding: 25px;
+}
+

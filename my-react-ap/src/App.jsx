@@ -1,5 +1,5 @@
 
-import DigitalClock from "./Digital Clock"
+import ComponentA from "./ComponentA"
 
 
 
@@ -9,7 +9,7 @@ function App() {
 
 return(<>
 
-<DigitalClock />
+<ComponentA />
 
 </>)
 }
