@@ -1,6 +1,6 @@
 
 
-import MyComponent from "./UseRef"
+import StopWatch from "./StopWatch"
 
 
 
@@ -10,8 +10,7 @@ function App() {
 
 return(<>
 
-<MyComponent/>
-
+<StopWatch/>
 </>)
 }
 
