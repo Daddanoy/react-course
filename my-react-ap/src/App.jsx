@@ -1,5 +1,6 @@
 
-import ComponentA from "./ComponentA"
+
+import MyComponent from "./UseRef"
 
 
 
@@ -9,7 +10,7 @@ function App() {
 
 return(<>
 
-<ComponentA />
+<MyComponent/>
 
 </>)
 }
