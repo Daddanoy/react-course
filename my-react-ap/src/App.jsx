@@ -1,6 +1,6 @@
+import ToDoApp from "./React Projects/ToDoList";
 
 
-import StopWatch from "./StopWatch"
 
 
 
@@ -10,7 +10,8 @@ function App() {
 
 return(<>
 
-<StopWatch/>
+<ToDoApp/>
+
 </>)
 }
 
