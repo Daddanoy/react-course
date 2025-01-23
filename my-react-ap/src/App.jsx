@@ -1,4 +1,5 @@
-import ToDoApp from "./React Projects/ToDoList";
+import CounterApp from "./React Projects/CounterProject"
+
 
 
 
@@ -10,7 +11,7 @@ function App() {
 
 return(<>
 
-<ToDoApp/>
+<CounterApp/>
 
 </>)
 }
