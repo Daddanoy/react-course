@@ -1,4 +1,5 @@
-import CounterApp from "./React Projects/CounterProject"
+
+import DynamicStyling from "./React Projects/LightDarkMode"
 
 
 
@@ -11,7 +12,7 @@ function App() {
 
 return(<>
 
-<CounterApp/>
+<DynamicStyling/>
 
 </>)
 }
