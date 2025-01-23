@@ -260,3 +260,19 @@ body{
 
 }
 CSS FOR STOPWATCH*/
+
+
+.dark-mode-button{
+  background-color: black;
+  color: white;
+}
+
+body{
+  background-color: beige ;
+}
+
+
+.dark-background{
+background-color: black;
+color: white;
+}
