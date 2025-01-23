@@ -1,5 +1,6 @@
+import EmojiPicker from "./React Projects/EmojiPicker"
 
-import DynamicStyling from "./React Projects/LightDarkMode"
+
 
 
 
@@ -12,7 +13,7 @@ function App() {
 
 return(<>
 
-<DynamicStyling/>
+<EmojiPicker/>
 
 </>)
 }
